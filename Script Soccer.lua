@@ -4,6 +4,7 @@ local tab1 = mainWin:CreateTab({"Ворота","http://www.roblox.com/asset/?id=
 local tab2 = mainWin:CreateTab({"Игрок","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
 local tab3 = mainWin:CreateTab({"tackle","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
 local tab4 = mainWin:CreateTab({"esp","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
+local tab5 = mainWin:CreateTab({"Troll","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
 tab1:Line("Ворота")
 mainWin:Notification({"Title", "Description", 2}) -- Title, description, time
 tab1:Button("Ворота Home",function() --text, callback
@@ -17,6 +18,12 @@ tab1:Button("Ворота Away",function() --text, callback
 if workspace.Stadium.Teams.Away.Goal.Hitbox.Size - Vector3.new(31.327247619628906, 11.277809143066406, 8.289474487304688) then
 workspace.Stadium.Teams.Home.Goal.Hitbox.Size = Vector3.new(0.01, 0.01, 0.01) 
 end
+end)
+tab1:Button("Ворота фикс",function() --text, callback
+   workspace.Stadium.Teams.Home.Goal.Hitbox.Size = Vector3.new(0.1, 0.1, 0.1)
+if workspace.Stadium.Teams.Home.Goal.Hitbox.Size - Vector3.new(31.327247619628906, 11.277809143066406, 8.289474487304688) then
+workspace.Stadium.Teams.Away.Goal.Hitbox.Size = Vector3.new(0.01, 0.01, 0.01)
+end 
 end)
 tab2:Button("Вратарь pro2810g",function() --text, callback
 workspace.pro2810g.Hitbox.Size = Vector3.new(50, 35, 25)
@@ -49,4 +56,7 @@ end)
 tab4:Button("esp pro2810g",function() --text, callback
 Workspace.pro2810g.TackleHitbox.Reflectance = 0
 Workspace.pro2810g.TackleHitbox.Transparency = 0.9
+end)
+tab5:Button("Тролл с мячом",function() --text, callback
+workspace.Junk.Football.VectorForce.Force = Vector3.new(0, 1000, 0)
 end)
