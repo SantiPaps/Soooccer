@@ -1,55 +1,52 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Super League Soccer", "Synapse")
-local Tab = Window:NewTab("HitBox")
-local Section = Tab:NewSection("Ворота")
-Section:NewButton("Ворота Home", "ButtonInfo", function()
-workspace.Stadium.Teams.Home.Goal.Hitbox.Size = Vector3.new(10000, 10000, 10000)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/tip52/onionLib/main/main.lua"))()
+local mainWin = Library:Window("Super League Soccer")
+local tab1 = mainWin:CreateTab({"Ворота","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
+local tab2 = mainWin:CreateTab({"Игрок","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
+local tab3 = mainWin:CreateTab({"tackle","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
+local tab4 = mainWin:CreateTab({"esp","http://www.roblox.com/asset/?id=7436811843"}) -- name, icon
+tab1:Line("Ворота")
+mainWin:Notification({"Title", "Description", 2}) -- Title, description, time
+tab1:Button("Ворота Home",function() --text, callback
+   workspace.Stadium.Teams.Home.Goal.Hitbox.Size = Vector3.new(10000, 10000, 10000)
 if workspace.Stadium.Teams.Home.Goal.Hitbox.Size - Vector3.new(31.327247619628906, 11.277809143066406, 8.289474487304688) then
 workspace.Stadium.Teams.Away.Goal.Hitbox.Size = Vector3.new(0.01, 0.01, 0.01)
 end 
 end)
-Section:NewButton("Ворота Away", "ButtonInfo", function()
-workspace.Stadium.Teams.Away.Goal.Hitbox.Size = Vector3.new(10000, 10000, 10000)
+tab1:Button("Ворота Away",function() --text, callback
+   workspace.Stadium.Teams.Away.Goal.Hitbox.Size = Vector3.new(10000, 10000, 10000)
 if workspace.Stadium.Teams.Away.Goal.Hitbox.Size - Vector3.new(31.327247619628906, 11.277809143066406, 8.289474487304688) then
 workspace.Stadium.Teams.Home.Goal.Hitbox.Size = Vector3.new(0.01, 0.01, 0.01) 
 end
 end)
-local Tab = Window:NewTab("Player")
-local Section = Tab:NewSection("Вратарь")
-Section:NewButton("pro2810g", "ButtonInfo", function()
+tab2:Button("Вратарь pro2810g",function() --text, callback
 workspace.pro2810g.Hitbox.Size = Vector3.new(50, 35, 25)
 end)
-Section:NewButton("YTYRFS", "ButtonInfo", function()
+tab2:Button("Вратарь YTYRFS",function() --text, callback
 workspace.YTYRFS.Hitbox.Size = Vector3.new(50, 35, 25)
 end)
-local Section = Tab:NewSection("все остальное")
-Section:NewButton("pro2810g", "ButtonInfo", function()
-workspace.pro2810g.Hitbox.Size = Vector3.new(1000, 1000, 2)
-end)
-Section:NewButton("pro2810g2048", "ButtonInfo", function()
-workspace.pro2810g.Hitbox.Size = Vector3.new(2048, 2048, 2048)
-end)
-Section:NewButton("YTYRFS", "ButtonInfo", function()
+tab2:Button("Все остальное YTYRFS 1000",function() --text, callback
 workspace.YTYRFS.Hitbox.Size = Vector3.new(1000, 1000, 2)
 end)
-Section:NewButton("YTYRFS 10000", "ButtonInfo", function()
+tab2:Button("Все остальное YTYRFS фулл",function() --text, callback
 workspace.YTYRFS.Hitbox.Size = Vector3.new(10000, 10000, 10000)
 end)
-local Tab = Window:NewTab("tackle")
-local Section = Tab:NewSection("Tackle")
-Section:NewButton("pro2810g", "ButtonInfo", function()
+tab2:Button("Все остальное pro2810g 1000",function() --text, callback
+workspace.pro2810g.Hitbox.Size = Vector3.new(1000, 1000, 2)
+end)
+tab2:Button("Все остальное pro2810g фулл",function() --text, callback
+workspace.pro2810g.Hitbox.Size = Vector3.new(10000, 10000, 10000)
+end)
+tab3:Button("Tackle pro2810g",function() --text, callback
 Workspace.pro2810g.TackleHitbox.Size = Vector3.new(50, 5, 50)
 end)
-Section:NewButton("YTYRFS", "ButtonInfo", function()
+tab3:Button("Tackle YTYRFS",function() --text, callback
 Workspace.YTYRFS.TackleHitbox.Size = Vector3.new(50, 5, 50)
 end)
-local Tab = Window:NewTab("esp")
-local Section = Tab:NewSection("Esp")
-Section:NewButton("esp pro2810g", "ButtonInfo", function()
-Workspace.pro2810g.TackleHitbox.Reflectance = 0
-Workspace.pro2810g.TackleHitbox.Transparency = 0.9
-end)
-Section:NewButton("esp YTYRFS", "ButtonInfo", function()
+tab4:Button("esp YTYRFS",function() --text, callback
 Workspace.YTYRFS.TackleHitbox.Reflectance = 0
 Workspace.YTYRFS.TackleHitbox.Transparency = 0.9
+end)
+tab4:Button("esp pro2810g",function() --text, callback
+Workspace.pro2810g.TackleHitbox.Reflectance = 0
+Workspace.pro2810gTackleHitbox.Transparency = 0.9
 end)
