@@ -48,5 +48,5 @@ Workspace.YTYRFS.TackleHitbox.Transparency = 0.9
 end)
 tab4:Button("esp pro2810g",function() --text, callback
 Workspace.pro2810g.TackleHitbox.Reflectance = 0
-Workspace.pro2810gTackleHitbox.Transparency = 0.9
+Workspace.pro2810g.TackleHitbox.Transparency = 0.9
 end)
