@@ -29,13 +29,13 @@ tab2:Button("Вратарь pro2810g",function() --text, callback
 workspace.pro2810g.Hitbox.Size = Vector3.new(50, 35, 25)
 end)
 tab2:Button("Вратарь YTYRFS",function() --text, callback
-workspace.YTYRFS.Hitbox.Size = Vector3.new(50, 35, 25)
+workspace.YTYRFSV2.Hitbox.Size = Vector3.new(50, 35, 25)
 end)
 tab2:Button("Все остальное YTYRFS 1000",function() --text, callback
-workspace.YTYRFS.Hitbox.Size = Vector3.new(1000, 1000, 2)
+workspace.YTYRFSV2.Hitbox.Size = Vector3.new(1000, 1000, 2)
 end)
 tab2:Button("Все остальное YTYRFS фулл",function() --text, callback
-workspace.YTYRFS.Hitbox.Size = Vector3.new(10000, 10000, 10000)
+workspace.YTYRFSV2.Hitbox.Size = Vector3.new(10000, 10000, 10000)
 end)
 tab2:Button("Все остальное pro2810g 1000",function() --text, callback
 workspace.pro2810g.Hitbox.Size = Vector3.new(1000, 1000, 2)
@@ -47,11 +47,11 @@ tab3:Button("Tackle pro2810g",function() --text, callback
 Workspace.pro2810g.TackleHitbox.Size = Vector3.new(50, 5, 50)
 end)
 tab3:Button("Tackle YTYRFS",function() --text, callback
-Workspace.YTYRFS.TackleHitbox.Size = Vector3.new(50, 5, 50)
+Workspace.YTYRFSV2.TackleHitbox.Size = Vector3.new(50, 5, 50)
 end)
 tab4:Button("esp YTYRFS",function() --text, callback
-Workspace.YTYRFS.TackleHitbox.Reflectance = 0
-Workspace.YTYRFS.TackleHitbox.Transparency = 0.9
+Workspace.YTYRFSV2.TackleHitbox.Reflectance = 0
+Workspace.YTYRFSV2.TackleHitbox.Transparency = 0.9
 end)
 tab4:Button("esp pro2810g",function() --text, callback
 Workspace.pro2810g.TackleHitbox.Reflectance = 0
